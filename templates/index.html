@@ -3,8 +3,8 @@
 {% load static %}
 
 {% block content %}
-
-    <section class="home-banner-area" style="background-image: url({% static 'images/learning.jpg' %})">
+    <section class="home-banner-area"
+             style="background-image: url({% static 'images/learning_banner.jpg' %});">
         <div class="container-lg">
             <div class="row">
                 <div class="col">
@@ -68,13 +68,13 @@
                     <h2 class="course-carousel-title">Top Courses</h2>
                     <div class="course-carousel">
                         {% for top_course in top_courses %}
-
                             <div class="course-box-wrap">
                                 <a href="{% url 'courses:course-details' top_course.slug %}" class="has-popover">
                                     <div class="course-box">
                                         <div class="course-badge position best-seller">Best seller</div>
                                         <div class="course-image">
-                                            <img style="height: 200px; width: 200px" src="{{ top_course.thumbnail.url }}" alt="" class="img-fluid">
+                                            <img style="height: 200px; width: 200px"
+                                                 src="{{ top_course.thumbnail.url }}" alt="" class="img-fluid">
                                         </div>
                                         <div class="course-details">
                                             <h5 class="title">{{ top_course.title }}</h5>

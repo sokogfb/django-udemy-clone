@@ -32,7 +32,7 @@ def cart_checkout(request):
     carts = Cart(request)
     for cart in carts:
         course = cart['course']
-        # course = get_object_or_404(Course, slug=course.slug)
+        course = get_object_or_404(Course, slug=course.slug)
         Enroll.objects.create(course=course, user_id=request.user.id)
     messages.success(request, 'Successfully checked out!')
     carts.clear()

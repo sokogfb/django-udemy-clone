@@ -1017,7 +1017,7 @@ input:focus {
     background-position: center center;
     background-size: cover;
     background-repeat: no-repeat;
-    padding: 170px 0 130px;
+    padding: 200px 0 400px;
     color: #fff;
 }
 
@@ -2737,6 +2737,7 @@ section.category-course-list-area {
 
 .course-box-2 .course-image {
     width: 26%;
+    height: 70px;
 }
 
 .course-box-2 .course-details {

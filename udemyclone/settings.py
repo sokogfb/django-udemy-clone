@@ -66,8 +66,18 @@ WSGI_APPLICATION = 'udemyclone.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'NAME': 'udemy_production',
+        'ENGINE': 'django.db.backends.postgresql',
+        'USER': 'postgres',
+        'PASSWORD': 'postgres',
+        'PORT': '5432'
+    },
+    '2021': {
+        'NAME': 'udemy_production_2021',
+        'ENGINE': 'django.db.backends.postgresql',
+        'USER': 'postgres',
+        'PASSWORD': 'postgres',
+        'PORT': '5432'
     }
 }
 
